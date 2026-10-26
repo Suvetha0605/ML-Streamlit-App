@@ -4,6 +4,9 @@ import joblib
 from pathlib import Path
 
 model_path = Path(__file__).resolve().parent.parent / "iris_model.pkl"
+from pathlib import Path
+
+model_path = Path(__file__).resolve().parent / "iris_model.pkl"
 model = joblib.load(model_path)
 
 st.title("Iris Flower Prediction")
