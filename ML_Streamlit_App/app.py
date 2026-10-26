@@ -1,8 +1,10 @@
 
 import streamlit as st
 import joblib
+from pathlib import Path
 
-model = joblib.load("iris_model.pkl")
+model_path = Path(__file__).resolve().parent.parent / "iris_model.pkl"
+model = joblib.load(model_path)
 
 st.title("Iris Flower Prediction")
 
